@@ -2,7 +2,11 @@ package com.entiry;
 
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.Set;
+
+import com.entiry.Cart;
+import com.entiry.Items;
 
 public class Cart {
 	private HashMap<Items,Integer> goods;
@@ -34,7 +38,8 @@ public class Cart {
 		Set<Items> items = goods.keySet();
 		Iterator<Items> it=items.iterator();
 		while(it.hasNext()){
-			sum+= ((Items) it).getPrice()*goods.get(it);
+			Items i = it.next();
+			sum+= i.getPrice()*goods.get(i);
 		}
 		this.setTotalPrice(sum);
 		return this.getTotalPrice();
@@ -53,5 +58,7 @@ public class Cart {
 	public void setTotalPrice(Double totalPrice) {
 		this.totalPrice = totalPrice;
 	}
+	
+
 
 }

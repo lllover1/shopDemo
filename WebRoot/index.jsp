@@ -63,7 +63,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
            <div>
               <dl>
                  <dt>
-                 <a href="details.jsp?id=<%=item.getId()%>"><img src="imagines/<%=item.getPicture() %>" height="110px" width="150px" border="1px"/></a> 
+                 <a href="details.jsp?id=<%=item.getId()%>"><img src="images/<%=item.getPicture() %>" height="110px" width="150px" border="1px"/></a> 
                  </dt>
                  <dd class="dd_name">运动鞋</dd>
                  <dd class="dd_city">产地：<%=item.getCity() %>&nbsp;&nbsp;价格：<%=item.getPrice() %></dd>

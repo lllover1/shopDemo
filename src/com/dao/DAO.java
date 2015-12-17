@@ -84,25 +84,26 @@ public class DAO {
     	List<Items> itemsList=new ArrayList<Items>();
     	itemsList=new ArrayList<Items>();
     	String[] str=list.split(",");
-    	System.out.println("dapo"+str[0]);
+    	
     	int iCount=5;
     	if(str!=null&&str.length>0){
     		if(str.length>=iCount){
-    			System.out.println("a");
+    			
     			for(int i=str.length-1;i>str.length-iCount-1;i--){
-    				System.out.println("b");
+   
     				Items items=new Items();
-    				items=getItems(Integer.parseInt(str[i]));
+    				if(str[i]!=null){
+    					items=getItems(Integer.parseInt(str[i]));
+    				}
     				itemsList.add(items);
-    				System.out.println("shuzu1"+itemsList.get(0).getId());
+    
     			}
     		}else{
-    			System.out.println("c");
+    			
     			for(int i=str.length-1;i>0;i--){
     				Items items=new Items();
     				items=getItems(Integer.parseInt(str[i]));
     				itemsList.add(items);
-    				System.out.println("shuzu"+itemsList.get(0).getId());
     			}
     			
     		}

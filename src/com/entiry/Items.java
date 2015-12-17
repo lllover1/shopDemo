@@ -7,6 +7,8 @@ public class Items {
 	private int price;
 	private int numble;
 	private String picture;
+	
+	
 	public int getId() {
 		return id;
 	}
